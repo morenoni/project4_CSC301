@@ -39,6 +39,22 @@ vector<Edge> prim(vector<Vertex> &adjList, vector<double> &adjMat) {
     vector<bool> visited(n, false);
     vector<double> cost(n, numeric_limits<double>::infinity());
     vector<int> prev(n, -1);
+    int start = 0;
+    cost[start] = 0; // Start at vertex 0.
+    visited[start] = true;
+    for (int neighbor : adjList[start].neighbors) {
+        cost[neighbor];
+        prev[neighbor] = start;
+    }
+
+    while(!isEmpty(visited)) {
+        int curr = getMin(cost, visited);
+        visited[curr] = true;
+
+    }
+
+
+    
 
     return mst;
 }
