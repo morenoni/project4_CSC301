@@ -3,8 +3,8 @@
  * prim.hpp
  * Fall 2025
  *
- * Partner 1:
- * Partner 2:
+ * Partner 1: Nicky Moreno Gonzalez
+ * Partner 2: Natalie Nardone 
  * Date:
  */
 
