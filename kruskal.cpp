@@ -21,11 +21,10 @@ using namespace std;
  * - the root of the set that v is in
  */
 int find(int v, vector<int> &pi) {
-    int temp = v;
-    while (pi[temp] != temp) {
-        temp = pi[temp];
+    if (pi[v] != v) {
+        pi[v] = find(pi[v], pi);
     }
-    return temp;
+    return pi[v];
 }
 
 /*
