@@ -5,7 +5,7 @@
  *
  * Partner 1: Nicky Moreno Gonzalez
  * Partner 2: Natalie Nardone 
- * Date: Tuesday, November 18, 2025
+ * Date: Thursday, November 20, 2025
  */
 
 #include "prim.hpp"
@@ -64,7 +64,7 @@ vector<Edge> prim(vector<Vertex> &adjList, vector<double> &adjMat) {
     vector<Edge> mst;
     
     // For each vertex, we need a visited flag, a 'cost' for Prim's, and the
-    // prev values to track the MST. Store these in seperate vectors.
+    // prev values to track the MST. Store these in seperate vectors
     int n = adjList.size();
     vector<bool> visited(n, false);
     vector<double> cost(n, numeric_limits<double>::infinity());
@@ -73,7 +73,7 @@ vector<Edge> prim(vector<Vertex> &adjList, vector<double> &adjMat) {
     cost[start] = 0; // Start at vertex 0.
     visited[start] = true;
     
-    // Sets the cost and previous values for the neighbors of the start vertex.
+    // Sets the cost and previous values for the neighbors of the start vertex
     for (int neighbor : adjList[start].neighbors) {
         cost[neighbor] = adjMat[start * n + neighbor];
         prev[neighbor] = start;
@@ -84,7 +84,7 @@ vector<Edge> prim(vector<Vertex> &adjList, vector<double> &adjMat) {
         int curr = getMin(cost, visited);
         visited[curr] = true;
 
-        // Adding the new Edge to the MST.
+        // Adding the new Edge to the MST
         int parent = prev[curr];
         double weight = adjMat[parent * n + curr];
         Edge newEdge(adjList[parent], adjList[curr], weight);

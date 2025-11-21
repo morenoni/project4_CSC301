@@ -5,7 +5,7 @@
  *
  * Partner 1: Nicky Moreno Gonzalez
  * Partner 2: Natalie Nardone 
- * Date: Tuesday, November 18, 2025
+ * Date: Thursday, November 20, 2025
  */
 
 #include "kruskal.hpp"
@@ -13,7 +13,7 @@
 using namespace std;
 
 /*
- * find: Finds the what set a given vertex is in.
+ * find: Finds what set a given vertex is in.
  * Inputs:
  * - v: the vertex to find the set of
  * - pi: the vector of parent pointers
